@@ -7,58 +7,72 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" >
     <title >Learn flexbox2</title >
     <style >
-
-        html,body{
-        height: 100%;
+        body,html{
+            height: 100%;
         }
-        /*body{*/
-        /*background: #00b1b3;*/
-        /*font-family: sans-serif;*/
-        /*display: flex;*/
-        /*align-items: flex-end;*/
-        /*justify-content: flex-end;*/
-        /*}*/
-
-        body {
-            font-size: 16px;
+        body{
+            margin: 0;
             font-family: sans-serif;
-            margin: 0;
+        }
+        header, footer{
+            background: #c5c5c5;
+        }
+        .container{
+            min-height: 100%;
+            background-color: red;
+            max-width: 1000px;
+            /*justify-content: space-between;*/
+            margin: auto;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            flex-direction: column;
         }
-
-        nav > ul{
-            margin: 0;
-            padding: 0;
+        .container > * {
+            padding: 0 20px;
+        }
+        footer{
+            margin-top: auto;
+        }
+        main{
             display: flex;
-            list-style: none;
-            justify-content: space-around;
+            /*background-color: red;*/
         }
-        .nav-item {
-            padding: 3em;
-
+        main aside{
+            margin-right: 40px;
         }
 
-        nav {
-            background: #f9f9f9;
-            width: 100%;
-        }
 
     </style >
 </head >
 <body >
 
-
-<nav >
-    <ul >
-        <li class="nav-item" ><a href="#" >Home</a ></li >
-        <li class="nav-item" ><a href="#" >About</a ></li >
-        <li class="nav-item" ><a href="#" >Forum</a ></li >
-        <li class="nav-item" ><a href="#" >Support</a ></li >
-    </ul >
-</nav >
-
+<div class="container">
+    <header >
+        <h1 >laracasts</h1 >
+    </header >
+    <main>
+        <aside >
+            <ul >
+                <li ><a href="#" >Link</a ></li >
+                <li ><a href="#" >Link</a ></li >
+                <li ><a href="#" >Link</a ></li >
+                <li ><a href="#" >Link</a ></li >
+                <li ><a href="#" >Link</a ></li >
+                <li ><a href="#" >Link</a ></li >
+                <li ><a href="#" >Link</a ></li >
+                <li ><a href="#" >Link</a ></li >
+            </ul >
+        </aside >
+        <div class="primary" >
+            <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam assumenda eligendi fugiat itaque laudantium minima mollitia nisi officia praesentium quas quidem, quod quos sed sequi sint sunt totam ut.</p >
+            <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur delectus facere hic labore, molestias officia quo. Adipisci animi, dolor eaque expedita ipsam minima molestiae obcaecati officiis, placeat, porro tempore tenetur!</p >
+            <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam illum repudiandae similique veritatis vitae. Ab blanditiis deleniti dolor eos fuga fugiat laboriosam minus nobis saepe totam. Blanditiis cumque dignissimos reprehenderit!</p >
+        </div >
+    </main>
+    <footer >
+        <h5 >laracasts</h5 >
+        <p >All rights reserved</p >
+    </footer >
+</div>
 
 </body >
 </html >
