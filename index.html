@@ -1,85 +1,111 @@
-<!doctype html>
-<html lang="en" >
-<head >
-    <meta charset="UTF-8" >
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" >
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" >
-    <title >Learn flexbox2</title >
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <style >
-        body,html{
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body, html{
+            font-family: sans-serif;
             height: 100%;
         }
         body{
-            margin: 0;
-            font-family: sans-serif;
-        }
-        header, footer{
-            background: #c5c5c5;
-        }
-        .container{
-            min-height: 100%;
-            background-color: red;
-            max-width: 1000px;
-            /*justify-content: space-between;*/
-            margin: auto;
             display: flex;
-            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
-        .container > * {
-            padding: 0 20px;
+        .episode-list{
+            max-width: 300px;
+
         }
-        footer{
-            /*margin-top: auto;*/
+        .episode-list-item .title{
+            padding-left: 1em;
+            padding-right: 1em;
+            margin-right: auto;
         }
-        main{
+        .episode-list-item{
+            align-items: center;
             display: flex;
-            margin-bottom: auto;
-            /*background-color: red;*/
+            border-bottom: 1px dashed #cecece;
+            justify-content: space-between;
+            padding: 10px 0;
         }
-        main aside{
-            margin-right: 40px;
+        .episode-list-item .title a{
+            color: inherit;
+            text-decoration: none;
         }
+        .episode-list-item.is-current i{
 
-        @media screen and (max-width: 768px) {
-
-            main{
-                flex-direction: column-reverse;
-            }
+            padding-right: 1em;
+            color: #cecece;
         }
-
+        .episode-list-item .position{
+            color: #00B1B4;
+            font-weight: bold;
+        }
+        .episode-list-item .title a:hover{
+            text-decoration: underline;
+        }
     </style >
-</head >
-<body >
+</head>
+<body>
 
-<div class="container">
-    <header >
-        <h1 >laracasts</h1 >
-    </header >
-    <main>
-        <aside >
-            <ul >
-                <li ><a href="#" >Link</a ></li >
-                <li ><a href="#" >Link</a ></li >
-                <li ><a href="#" >Link</a ></li >
-                <li ><a href="#" >Link</a ></li >
-                <li ><a href="#" >Link</a ></li >
-                <li ><a href="#" >Link</a ></li >
-                <li ><a href="#" >Link</a ></li >
-                <li ><a href="#" >Link</a ></li >
-            </ul >
-        </aside >
-        <div class="primary" >
-            <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam assumenda eligendi fugiat itaque laudantium minima mollitia nisi officia praesentium quas quidem, quod quos sed sequi sint sunt totam ut.</p >
-            <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur delectus facere hic labore, molestias officia quo. Adipisci animi, dolor eaque expedita ipsam minima molestiae obcaecati officiis, placeat, porro tempore tenetur!</p >
-            <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam illum repudiandae similique veritatis vitae. Ab blanditiis deleniti dolor eos fuga fugiat laboriosam minus nobis saepe totam. Blanditiis cumque dignissimos reprehenderit!</p >
-        </div >
-    </main>
-    <footer >
-        <h5 >laracasts</h5 >
-        <p >All rights reserved</p >
-    </footer >
-</div>
+<ul class="episode-list">
+    <li class="episode-list-item">
+        <span class="position">1</span>
 
-</body >
-</html >
+        <h4 class="title">
+            <a href="#">
+                Babel Setup
+            </a>
+        </h4>
+
+        <span class="length">9:00</span>
+    </li>
+
+    <li class="episode-list-item is-current">
+        <span class="position">2</span>
+
+        <h4 class="title">
+            <a href="#">
+                ES6 Compilation With Laravel Elixir
+            </a>
+        </h4>
+
+        <i class="material-icons">remove_red_eye</i>
+
+        <span class="length">10:02</span>
+    </li>
+
+    <li class="episode-list-item">
+        <span class="position">3</span>
+
+        <h4 class="title">
+            <a href="#">
+                Babel Setup
+            </a>
+        </h4>
+
+        <span class="length">10:02</span>
+    </li>
+
+    <li class="episode-list-item">
+        <span class="position">4</span>
+
+        <h4 class="title">
+            <a href="#">
+                Arrows
+            </a>
+        </h4>
+
+        <span class="length">7:41</span>
+    </li>
+</ul>
+
+</body>
+</html>
